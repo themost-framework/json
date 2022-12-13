@@ -40,7 +40,7 @@ const config = [
       format: 'cjs',
       sourcemap: true
     },
-    externals: [
+    external: [
       "@themost/json"
     ],
     plugins: [babel({
@@ -54,7 +54,7 @@ const config = [
       format: 'esm',
       sourcemap: true
     },
-    externals: [
+    external: [
       "@themost/json"
     ],
     plugins: [babel({
@@ -64,7 +64,7 @@ const config = [
   {
     input: 'register/src/index.d.ts',
     output: [{ file: 'register/dist/index.d.ts', format: 'es' }],
-    externals: [
+    external: [
       "@themost/json"
     ],
     plugins: [dts({
