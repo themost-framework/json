@@ -1,6 +1,8 @@
 # test
 spec
 .nyc_output
+.nycrc.json
+jsconfig.json
 
 # github
 .github
