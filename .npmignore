@@ -1,0 +1,15 @@
+# test
+spec
+.nyc_output
+
+# babel
+babel.config.js
+
+# dev
+.vscode
+.theia
+.idea
+.DS_STore
+
+# rollup
+rollup.config.js

@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "moduleResolution": "classic",
+        "module": "ESNext",
+        "target": "ESNext",
+        "paths": {
+            "@themost/json/register": [
+                "register/src/index"
+            ],
+            "@themost/json": [
+                "src/index"
+            ]
+        }
+    }
+}

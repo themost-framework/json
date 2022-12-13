@@ -1,0 +1,44 @@
+{
+  "name": "@themost/json",
+  "version": "1.0.0",
+  "description": "JSON parser extensions",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "nyc jasmine",
+    "build": "rimraf dist && rollup -c rollup.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/themost-framework/json.git"
+  },
+  "keywords": [
+    "JSON",
+    "stringify",
+    "parse"
+  ],
+  "author": "",
+  "license": "BSD-3-Clause",
+  "bugs": {
+    "url": "https://github.com/themost-framework/json/issues"
+  },
+  "homepage": "https://github.com/themost-framework/json#readme",
+  "devDependencies": {
+    "@babel/core": "^7.17.8",
+    "@babel/eslint-parser": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/register": "^7.17.7",
+    "@rollup/plugin-babel": "^5.3.1",
+    "eslint": "^8.12.0",
+    "jasmine": "^3.6.1",
+    "jasmine-spec-reporter": "^5.0.2",
+    "module-alias": "^2.2.2",
+    "nyc": "^15.1.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.70.1",
+    "rollup-plugin-dts": "^4.2.0",
+    "typescript": "^4.9.4"
+  },
+  "dependencies": {}
+}
