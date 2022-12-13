@@ -1,3 +1,4 @@
+// MOST Web Framework Codename Zero Gravity Copyright (c) 2017-2022, THEMOST LP All rights reserved
 /**
  * Checks if the given value is an ISO date formatted string
  * @param {*} value 

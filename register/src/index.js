@@ -1,4 +1,4 @@
-
+// MOST Web Framework Codename Zero Gravity Copyright (c) 2017-2022, THEMOST LP All rights reserved
 import { timestampReplacer, timestampReviver } from '@themost/json';
 let superStringify;
 let superParse;
