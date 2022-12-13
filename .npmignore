@@ -2,6 +2,9 @@
 spec
 .nyc_output
 
+# github
+.github
+
 # babel
 babel.config.js
 
