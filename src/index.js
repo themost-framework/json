@@ -1,16 +1,21 @@
 // MOST Web Framework Codename Zero Gravity Copyright (c) 2017-2022, THEMOST LP All rights reserved
+
+const ISO_DATE_REGEX = /^\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d\.\d+([+-][0-2]\d:[0-5]\d|Z)$/gm;
+
+const TIMESTAMP_REGEX = /^\d{4}-[01]\d-[0-3]\d[T][0-2]\d:[0-5]\d:[0-5]\d\.\d+([+-][0-2]\d:[0-5]\d|[+-][0-9]\d:[0-9]\d)$/gm;
+
 /**
  * Checks if the given value is an ISO date formatted string
  * @param {*} value 
  * @returns {boolean}
- */
+*/
 function isDateString(value) {
-    return /^\d{4}-[01]\d-[0-3]\dT[0-2]\d:[0-5]\d:[0-5]\d\.\d+([+-][0-2]\d:[0-5]\d|Z)$/.test(value);
+    return typeof value === 'string' && value.match(ISO_DATE_REGEX) != null;
 }
 
 
 function isTimestampString(value) {
-    return /^\d{4}-[01]\d-[0-3]\d[T][0-2]\d:[0-5]\d:[0-5]\d\.\d+([+-][0-2]\d:[0-5]\d|[+-][0-9]\d:[0-9]\d)$/gm.test(value);
+    return typeof value === 'string' && value.match(TIMESTAMP_REGEX)  != null;
 }
 
 function zeroPad(number, length) {
