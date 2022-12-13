@@ -36,6 +36,7 @@ describe('JSON.stringify', () => {
             if (key === 'message') {
                 return 'Hello World!'
             }
+            return value;
         });
         expect(clone.message).toEqual('Hello World!');
         expect(clone.createdAt).toEqual(item.createdAt);
