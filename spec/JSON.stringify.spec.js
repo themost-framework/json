@@ -23,7 +23,8 @@ describe('JSON.stringify', () => {
     it('should use stringify with replacer', () => {
         const item = {
             message: 'Hello World',
-            createdAt: new Date()
+            createdAt: new Date(),
+            modifiedAt: new Date()
         };
         const str = JSON.stringify(item, function(key, value) {
             if (key === 'message') {
@@ -40,6 +41,7 @@ describe('JSON.stringify', () => {
         });
         expect(clone.message).toEqual('Hello World!');
         expect(clone.createdAt).toEqual(item.createdAt);
+        expect(clone.modifiedAt).toEqual(item.modifiedAt);
         
     });
 
