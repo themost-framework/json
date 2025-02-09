@@ -86,8 +86,12 @@ class JSONArray extends Array {
             this.push(...iterable);
         }
     }
-    toString() {
-        return JSON.stringify(this, timestampReplacer);
+    /**
+     * @param {(string|number)=} space 
+     * @returns {string}
+     */
+    toString(space) {
+        return JSON.stringify(this, timestampReplacer, space);
     }
 }
 
@@ -103,8 +107,12 @@ class JSONObject extends Object {
             }
         }
     }
-    toString() {
-        return JSON.stringify(this, timestampReplacer);
+    /**
+     * @param {(string|number)=} space 
+     * @returns {string}
+     */
+    toString(space) {
+        return JSON.stringify(this, timestampReplacer, space);
     }
 }
 

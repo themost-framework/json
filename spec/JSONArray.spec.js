@@ -31,6 +31,12 @@ describe('JSONArray', () => {
         expect(json).toEqual('[1,2,3,4,5]');
     });
 
+    it('should use JSONArray.toString() with indent', () => {
+        const arr = new JSONArray([ 1, 2, 3, 4, 5 ]);
+        const json = arr.toString(2);
+        expect(json).toEqual(`[\n  1,\n  2,\n  3,\n  4,\n  5\n]`);
+    });
+
     it('should use JSONObject with init', () => {
         const obj = new JSONObject({
             value: new Date(2022, 11, 14),

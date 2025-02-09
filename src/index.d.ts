@@ -9,7 +9,17 @@ export declare class JSONArray<T> extends Array {
 
 export declare class JSONArray extends JSONArray<any> {
     constructor(iterable? : ArrayLike<any> | Iterable<any>);
+    /**
+     * Returns a JSON string representation of this object
+     * @param space 
+     */
+    toString(space?: string | number): string;
 }
 export declare class JSONObject extends Object {
     construstor(init?: any);
+    /**
+     * Returns a JSON string representation of this object
+     * @param space 
+     */
+    toString(space?: string | number): string;
 }
