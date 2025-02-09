@@ -2,3 +2,24 @@
 export declare function toTimestamp(value:Date): string;
 export declare function timestampReplacer(key: string, value: any): string;
 export declare function timestampReviver(key: string, value: any): any;
+
+export declare class JSONArray<T> extends Array {
+    constructor(iterable? : ArrayLike<T> | Iterable<T>);
+}
+
+export declare class JSONArray extends JSONArray<any> {
+    constructor(iterable? : ArrayLike<any> | Iterable<any>);
+    /**
+     * Returns a JSON string representation of this object
+     * @param space 
+     */
+    toString(space?: string | number): string;
+}
+export declare class JSONObject extends Object {
+    construstor(init?: any);
+    /**
+     * Returns a JSON string representation of this object
+     * @param space 
+     */
+    toString(space?: string | number): string;
+}

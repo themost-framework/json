@@ -76,9 +76,51 @@ function timestampReviver(key, value) {
 }
 
 
+class JSONArray extends Array {
+    /**
+     * @param {{Iterable<*>|ArrayLike<*>} iterable 
+     */
+    constructor(iterable) {
+        super();
+        if (iterable) {
+            this.push(...iterable);
+        }
+    }
+    /**
+     * @param {(string|number)=} space 
+     * @returns {string}
+     */
+    toString(space) {
+        return JSON.stringify(this, timestampReplacer, space);
+    }
+}
+
+class JSONObject extends Object {
+    /**
+     * @param {Object=} init
+     */
+    constructor(init) {
+        super();
+        if (typeof init === 'object') {
+            for (let key of Object.keys(init)) {
+                this[key] = init[key];
+            }
+        }
+    }
+    /**
+     * @param {(string|number)=} space 
+     * @returns {string}
+     */
+    toString(space) {
+        return JSON.stringify(this, timestampReplacer, space);
+    }
+}
+
 
 export {
     toTimestamp,
     timestampReplacer,
-    timestampReviver
+    timestampReviver,
+    JSONArray,
+    JSONObject
 }
