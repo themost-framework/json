@@ -10,6 +10,27 @@ describe('JSONArray', () => {
         expect(json).toEqual(`["${value}"]`);
     });
 
+    it('should use JSONArray with Set', () => {
+        const set = new Set([ 1,2,3,4,5 ]);
+        const arr = new JSONArray(set);
+        const json = arr.toString();
+        expect(json).toEqual('[1,2,3,4,5]');
+    });
+
+    it('should use JSONArray with Map', () => {
+        const map = new Map([ [ 'a', 1 ], [ 'b', 2 ], [ 'c', 3 ] ]);
+        const arr = new JSONArray(map);
+        const json = arr.toString();
+        expect(json).toEqual('[["a",1],["b",2],["c",3]]');
+    });
+
+    it('should use Array and change prototype to JSONArray', () => {
+        const arr = [ 1, 2, 3, 4, 5 ];
+        Object.setPrototypeOf(arr, JSONArray.prototype);
+        const json = arr.toString();
+        expect(json).toEqual('[1,2,3,4,5]');
+    });
+
     it('should use JSONObject with init', () => {
         const obj = new JSONObject({
             value: new Date(2022, 11, 14),
