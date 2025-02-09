@@ -93,13 +93,13 @@ class JSONArray extends Array {
 
 class JSONObject extends Object {
     /**
-     * @param {Object=} value
+     * @param {Object=} init
      */
-    constructor(value) {
+    constructor(init) {
         super();
-        if (value) {
-            for (let key of Object.keys(value)) {
-                this[key] = value[key];
+        if (typeof init === 'object') {
+            for (let key of Object.keys(init)) {
+                this[key] = init[key];
             }
         }
     }

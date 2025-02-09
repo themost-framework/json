@@ -11,5 +11,5 @@ export declare class JSONArray extends JSONArray<any> {
     constructor(iterable? : ArrayLike<any> | Iterable<any>);
 }
 export declare class JSONObject extends Object {
-    construstor(value?: any);
+    construstor(init?: any);
 }
